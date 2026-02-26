@@ -1,0 +1,52 @@
+/* iPadなどの大きな画面でも見やすく、タップしやすくします */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+#display {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* iPadで押しやすいようにボタンを大きく */
+button {
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    background-color: #007bff;
+    color: white;
+    transition: transform 0.1s;
+    /* Enterキー等での予期せぬ動作を防ぐ */
+    user-select: none;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #0056b3;
+}
